@@ -1,0 +1,20 @@
+### Yeni Mağaza Ekleme Testi
+POST http://localhost:8080/api/stores
+Content-Type: application/json
+
+{
+  "name": "Tarık's Flowers",
+  "vendorName": "Tarık"
+}
+
+### 1 Numaralı Mağazaya Çiçek Ekleme Testi
+POST http://localhost:8080/api/flowers/store/1
+Content-Type: application/json
+
+{
+  "name": "Kırmızı Gül Buketi",
+  "price": 450.0,
+  "category": "Buket",
+  "imagePath": "assets/images/gul.png",
+  "description": "Özel tasarım, taze kesim 11'li kırmızı gül buketi."
+}
