@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Security - Hassas dosyalar ###
+*.env
+.env.*
+application-secret.properties
+application-prod.properties
+src/main/resources/application-local.properties

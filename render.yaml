@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: flowerist-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_PASSWORD
+        sync: false
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+    healthCheckPath: /actuator/health
+    buildCommand: ./mvnw clean package -DskipTests

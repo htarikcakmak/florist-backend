@@ -2,13 +2,15 @@ package com.cicekci.api.controller;
 
 import com.cicekci.api.entity.store;
 import com.cicekci.api.repository.storerepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController // Buranın dış dünyaya açık bir API kapısı olduğunu belirtir
-@RequestMapping("/api/stores") // Bu kapının adresi
+@RestController
+@RequestMapping("/api/stores")
+@Tag(name = "Stores", description = "Mağaza listeleme ve oluşturma")
 public class storecontroller {
 
     @Autowired
