@@ -38,3 +38,9 @@ build/
 application-secret.properties
 application-prod.properties
 src/main/resources/application-local.properties
+
+*.p12
+*.pem
+*.key
+*.keystore
+*.jks
