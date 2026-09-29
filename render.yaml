@@ -7,8 +7,10 @@ services:
       - key: DB_PASSWORD
         sync: false
       - key: SPRING_DATASOURCE_URL
-        sync: false
+        value: jdbc:postgresql://ep-morning-unit-as3jxork-pooler.c-4.eu-central-1.aws.neon.tech/neondb?sslmode=require
       - key: SPRING_DATASOURCE_USERNAME
-        sync: false
+        value: neondb_owner
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromEnvVar: DB_PASSWORD
     healthCheckPath: /actuator/health
-    buildCommand: ./mvnw clean package -DskipTests
+    plan: free
